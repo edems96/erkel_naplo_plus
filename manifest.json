@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+
+	"name": "Erkel Napló Plus",
+	"description": "Ez a Google Chrome kiegészítő az erkel.hu naplót egészíti ki.",
+	"version": "2.0",
+
+	"permissions": [
+		"http://www.erkel.hu/npub/tanjegy.pl"
+	],
+	
+	"content_scripts": [
+		{
+		"matches": ["http://www.erkel.hu/npub/tanjegy.pl*"],
+		"js": ["jquery-1.11.1.min.js", "erkel.js"]
+		}
+	],
+	
+	"web_accessible_resources": [
+		"jquery-1.11.1.min.js"
+	]
+}
